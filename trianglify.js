@@ -145,8 +145,10 @@ Trianglify.Pattern.prototype.generateSVG = function () {
     }
 
     this.polys.forEach(function(d) {
-        var x = (d[0][0] + d[1][0] + d[2][0])/3;
-        var y = (d[0][1] + d[1][1] + d[2][1])/3;
+	var x1 = (d[0][0] + d[1][0] + d[2][0])/3;
+        var x = Math.floor((Math.random() * x1) + 1); // add some randomness
+        var y1 = (d[0][1] + d[1][1] + d[2][1])/3;
+        var y = Math.floor((Math.random() * y1) + 1); // add some randomness
         var c = color(x, y);
         var g = group.append("path").attr("d", "M" + d.join("L") + "Z").attr({ fill: c, stroke: c });
         if (options.fillOpacity != 1)
