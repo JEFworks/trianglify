@@ -5,7 +5,7 @@
 Forked modifications:
 - Added randomness/jitter to the gradient for a more crystal-like effect; goal is to create a low-poly crumped paper svg texture
 
-![](examples/example-jf.png)
+![](examples/example-jf.jpg)
 
 ---
 
